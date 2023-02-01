@@ -1,11 +1,13 @@
+import javax.swing.JOptionPane;
+
 //Classe principal do Jogo de Dados
 public class JogoDeDadosMain {
 
 	public static void main(String[] args) {
-		Jogador jogador1 = new Jogador("Caio"); //Instância da classe Jogador 
-		Jogador jogador2 = new Jogador("Robson"); //Instância da classe Jogador
+		Jogador jogador1 = new Jogador(JOptionPane.showInputDialog("diga seu nome:")); //Instância da classe Jogador 
+		Jogador jogador2 = new Jogador(JOptionPane.showInputDialog("diga seu nome:")); //Instância da classe Jogador
 		
-		JogoDeDados jogoDeDados = new JogoDeDados(jogador1, jogador2, 4); //Instância da classe JogoDeDados que pega o jogador1, jogador2 e o numero de lados do dado
+		JogoDeDados jogoDeDados = new JogoDeDados(jogador1, jogador2, 6); //Instância da classe JogoDeDados que pega o jogador1, jogador2 e o numero de lados do dado
 		
 		jogoDeDados.jogar(); //Método jogar chamado da classe JogoDeDados
 		jogoDeDados.jogar();
